@@ -1,4 +1,4 @@
-//Add an onSale property to the data, and use it to conditionally render a span that says “On Sale!”
+//Add an array of sizes to the data and use v-for to display them in a list. 
 
 var app = new Vue({
   el: '#app',
@@ -7,6 +7,18 @@ var app = new Vue({
     image: './assets/vmSocks-green-onWhite.jpg',
     link: 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks',
     inStock: true,
+    details: ['80% cotton', '20% polyester', 'Gender-neutral'],
+    variants: [
+      {
+        variantId: 2234,
+        variantColor: 'green'    
+      },
+      {
+        variantId: 2235,
+        variantColor: 'blue'
+      }
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
     onSale: true
   } 
 })
