@@ -1,4 +1,4 @@
-//Add an array of sizes to the data and use v-for to display them in a list. 
+//Create a new button and method to decrement the value of `cart`.
 
 var app = new Vue({
   el: '#app',
@@ -11,14 +11,28 @@ var app = new Vue({
     variants: [
       {
         variantId: 2234,
-        variantColor: 'green'    
+        variantColor: 'green',
+        variantImage: './assets/vmSocks-green-onWhite.jpg'
       },
       {
         variantId: 2235,
-        variantColor: 'blue'
+        variantColor: 'blue',
+        variantImage: './assets/vmSocks-blue-onWhite.jpg'
       }
     ],
+    cart: 0,
     sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
     onSale: true
-  } 
+  },
+  methods: {
+    addToCart() {
+      this.cart += 1
+    },
+    updateProduct(variantImage) {
+      this.image = variantImage
+    },
+    removeFromCart() {
+      this.cart -= 1
+    }
+  }
 })
