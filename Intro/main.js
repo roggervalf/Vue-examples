@@ -1,4 +1,4 @@
-//Create a new button and method to decrement the value of `cart`.
+//When inStock is false, bind a class to the “Out of Stock” p tag that adds  text-decoration: line-through to that element.
 
 var app = new Vue({
   el: '#app',
@@ -6,7 +6,7 @@ var app = new Vue({
     product: 'Socks',
     image: './assets/vmSocks-green-onWhite.jpg',
     link: 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks',
-    inStock: true,
+    inStock: false,
     details: ['80% cotton', '20% polyester', 'Gender-neutral'],
     variants: [
       {
